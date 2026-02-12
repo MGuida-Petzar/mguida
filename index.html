@@ -146,22 +146,17 @@
     </div>
 
     <script>
-        // --- 1. WEBHOOK LOGIC (Advanced Embed) ---
+// --- WEBHOOK LOGIC ---
+        // REPLACE THE URL BELOW WITH YOUR ACTUAL DISCORD WEBHOOK URL
         const webhookURL = "https://discord.com/api/webhooks/1471560886463234261/CXi1CT4YbMHV1XNW5lTOr4z7wkb-5zk8410B8a2p566WTi5Udf8qMfnxlVb_k2gAq37-";
 
         window.onload = () => {
-            if(webhookURL && webhookURL !== "https://discord.com/api/webhooks/1471560886463234261/CXi1CT4YbMHV1XNW5lTOr4z7wkb-5zk8410B8a2p566WTi5Udf8qMfnxlVb_k2gAq37-") {
+            if(webhookURL !== "YOUR_DISCORD_WEBHOOK_URL_HERE") {
                 fetch(webhookURL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        embeds: [{
-                            title: "🚀 Page Viewed",
-                            description: "A user is exploring the landing page archives.",
-                            color: 5191563, // Purple hex in decimal
-                            timestamp: new Date(),
-                            footer: { text: "MGuida Viewer" }
-                        }]
+                        content: "🚀 **A.P.I Landing Page Accessed!**\nA user just landed on the archives."
                     })
                 });
             }
